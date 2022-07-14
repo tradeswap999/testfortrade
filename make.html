@@ -2,58 +2,59 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Make A Trade - BulletSwap</title>
-    <link rel="icon" href="/favicon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com/">
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-    <link href="css/css2.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/resize.css">
-    <link href="./img/favicon.png" rel="shortcut icon" />
-    <script src="js/91cdff5e02.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Make A Trade - BulletSwap</title>
+  <link rel="icon" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="css/css2.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/resize.css">
+  <script src="js/91cdff5e02.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" type="text/css" href="css/toastify.min.css">
+  <link rel="stylesheet" type="text/css" href="css/toastify.min.css">
 
-    <script src="js/moralis.js"></script>
-    <style>
-        .btn-transfer {
-            cursor: pointer;
-        }
-    </style>
+  <script src="js/moralis.js"></script>
+  <style>
+    .btn-transfer {
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
-    <header>
-        <nav class="container">
-            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
-            <ul class="remove">
-                <li><a href="index.html">Home</a></li>
-                <li class="active-nav"><a href="#">Make a trade</a></li>
-                <li><a href="trade.html">My Trades</a></li>
-                <li><a href="history.html">Deals History</a></li>
-            </ul>
-            <ul class="hide">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="make.html">Make a trade</a></li>
-                <li><a href="trade.html">My Trades</a></li>
-                <li><a href="history.html">Deals History</a></li>
-                <div></div>
-                <div class="flex-net">
-                    <li>
-                        <a href="https://twitter.com/BulletswapIO"><img src="img/logo-twitter.png" alt="twitter logo"
+  <header>
+    <nav class="container">
+      <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+      <ul class="remove">
+        <li><a href="index.html">Home</a></li>
+        <li class="active-nav"><a href="#">Make a trade</a></li>
+        <li><a href="trade.html">My Trades</a></li>
+        <li><a href="history.html">Deals History</a></li>
+      </ul>
+      <ul class="hide">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="make.html">Make a trade</a></li>
+        <li><a href="trade.html">My Trades</a></li>
+        <li><a href="history.html">Deals History</a></li>
+        <div></div>
+        <div class="flex-net">
+          <li>
+            <a href="https://twitter.com/BulletswapIO"><img src="img/logo-twitter.png" alt="twitter logo"
                 class="logo-networks"></a>
-                    </li>
-                    <li>
-                        <a href="https://discord.gg/bulletswap"><img src="img/Discord_10.png" alt="twitter logo"
+          </li>
+          <li>
+            <a href="https://discord.gg/bulletswap"><img src="img/Discord_10.png" alt="twitter logo"
                 class="logo-networks"></a>
-                    </li>
-                </div>
-            </ul>
-            <button class="menu thismenu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+          </li>
+        </div>
+      </ul>
+      <button class="menu thismenu"
+        onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+        aria-label="Main Menu">
         <svg width="100" height="100" viewBox="0 0 100 100">
           <path class="line line1"
             d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058">
@@ -64,73 +65,73 @@
           </path>
         </svg>
       </button>
-            <ul class="ul-net">
-                <li>
-                    <a href="https://discord.gg/bulletswap"><img src="img/Discord_10.png" alt="discord logo"
+      <ul class="ul-net">
+        <li>
+          <a href="https://discord.gg/bulletswap"><img src="img/Discord_10.png" alt="discord logo"
               class="logo-networks"></a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/BulletswapIO"><img src="img/logo-twitter.png" alt="twitter logo"
+        </li>
+        <li>
+          <a href="https://twitter.com/BulletswapIO"><img src="img/logo-twitter.png" alt="twitter logo"
               class="logo-networks"></a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="make-heading">
-            <h1>
-                <span class="strong-this">Step <span id="stepSpan">0</span> of 2</span>
-                <i id="stepInfo">Connect your wallet to make a trade.</i>
-            </h1>
-            <a id="mainButton" class="btn-make color-2">Connect your Wallet</a>
-            <a id="claimButton" class="btn-make color-2">Make a trade</a>
-        </section>
-        <div class="trade-zone" style="opacity: 0.5; pointer-events: none">
-            <div class="trade trade-leftzone">
-                <div class="top-content">
-                    <div class="flex-content">
-                        <h2>My Wallet Assets</h2>
-                        <div class="div-out">out</div>
-                    </div>
-                    <div class="flex-content-btn">
-                        <div class="btn-add open"></div>
-                    </div>
-                </div>
-                <div class="user-adress">
-                    <img src="img/image.svg" alt="user image">
-                    <p id="userWalletAdress">(connect your wallet)</p>
-                </div>
-                <div class="nft-list"></div>
-            </div>
-            <div class="trade trade-rightzone">
-                <div class="top-content oeoe">
-                    <div class="flex-content">
-                        <h2 class="resize">Countery Parts Asset</h2>
-                        <div class="div-in">in</div>
-                    </div>
-                    <div class="flex-content-btn2">
-                        <div>
-                            <div class="btn-add open-counter" id="openCounterButton" style="pointer-events: none;"></div>
-                        </div>
-                        <div class="adress-btn" id="openCounterAddress">0x...</div>
-                    </div>
-                </div>
-                <div class="user-adress">
-                    <img src="img/image.svg" alt="user image">
-                    <p id="otherWalletAdress">Select a wallet</p>
-                </div>
-                <div class="nft-list-counter"></div>
-            </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="make-heading">
+      <h1>
+        <span class="strong-this">Step <span id="stepSpan">0</span> of 2</span>
+        <i id="stepInfo">Connect your wallet to make a trade.</i>
+      </h1>
+      <a id="mainButton" class="btn-make color-2">Connect your Wallet</a>
+      <a id="claimButton" class="btn-make color-2">Make a trade</a>
+    </section>
+    <div class="trade-zone" style="opacity: 0.5; pointer-events: none">
+      <div class="trade trade-leftzone">
+        <div class="top-content">
+          <div class="flex-content">
+            <h2>My Wallet Assets</h2>
+            <div class="div-out">out</div>
+          </div>
+          <div class="flex-content-btn">
+            <div class="btn-add open"></div>
+          </div>
         </div>
-        <div class="blurback"></div>
-        <div class="pop-up">
-            <div class="flex-pop">
-                <h4>Pick assets from wallet</h4>
-                <div class="border-pick-assets"></div>
-                <i class="fa-solid fa-xmark close"></i>
+        <div class="user-adress">
+          <img src="img/image.svg" alt="user image">
+          <p id="userWalletAdress">(connect your wallet)</p>
+        </div>
+        <div class="nft-list"></div>
+      </div>
+      <div class="trade trade-rightzone">
+        <div class="top-content oeoe">
+          <div class="flex-content">
+            <h2 class="resize">Countery Parts Asset</h2>
+            <div class="div-in">in</div>
+          </div>
+          <div class="flex-content-btn2">
+            <div>
+              <div class="btn-add open-counter" id="openCounterButton" style="pointer-events: none;"></div>
             </div>
-            <div class="article-transfer"></div>
-            <!-- <article>
+            <div class="adress-btn" id="openCounterAddress">0x...</div>
+          </div>
+        </div>
+        <div class="user-adress">
+          <img src="img/image.svg" alt="user image">
+          <p id="otherWalletAdress">Select a wallet</p>
+        </div>
+        <div class="nft-list-counter"></div>
+      </div>
+    </div>
+    <div class="blurback"></div>
+    <div class="pop-up">
+      <div class="flex-pop">
+        <h4>Pick assets from wallet</h4>
+        <div class="border-pick-assets"></div>
+        <i class="fa-solid fa-xmark close"></i>
+      </div>
+      <div class="article-transfer"></div>
+              <!-- <article>
           <img
             src="https://lh3.googleusercontent.com/wbTzWn8ZEfqxZLkJlbd7DBJZB3sm7UvxWwENtJb2JDu0IQqmmsVB_IodNlKxw9EiHNhx7gs2wMFThih2R5cK8DA_NnVzSEphlneQHQ=w600"
             alt="nft image" />
@@ -152,57 +153,59 @@
           <button class="btn-transfer btn-one transferItemsButton" contract="ETH" infocontract="88920835899000" where="user">
             Transfer </button>
         </article> -->
-        </div>
-        <div class="pop-up-counter">
-            <div class="flex-pop">
-                <h4>Pick assets from wallet</h4>
-                <div class="border-pick-assets"></div>
-                <i class="fa-solid fa-xmark close-two"></i>
-            </div>
-            <div class="article-transfer article-transfer-counter">
-            </div>
-        </div>
-        <div class="select-wallet">
-            <div class="flex-pop-select">
-                <i class="fa-solid fa-xmark close-three"></i>
-            </div>
-            <h5>Select Counterparty</h5>
-            <p>type the counterparty wallet</p>
-            <form class="input-wallet-container">
-                <label for="search">Search </label>
-                <input type="text" id="wallet-search" name="search" class="search">
-                <button class="selectbutton" id="selectWalletButt">SELECT</button>
-            </form>
-            <style>
-                .selectbutton {
-                    border-top-right-radius: 17px;
-                    border-bottom-right-radius: 17px;
-                    padding: 17px;
-                    background-image: linear-gradient(90deg, rgba(113, 118, 198, 1) 20%, rgba(200, 37, 157, 1) 75%);
-                    color: #fff;
-                    font-family: "Urbanist", sans-serif;
-                    font-weight: bold;
-                    border: none;
-                    outline: none;
-                    cursor: pointer;
-                }
-            </style>
-        </div>
-    </main>
-    <footer>
-        <small>®️2022 Bullet Swap .All Rights Reserved.</small>
-    </footer>
-    <!-- <script src="js/make.js"></script> -->
-    <script src="js/app.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/index.min.js"></script>
-    <script src="js/web3.min.js"></script>
-    <script type="text/javascript" src="toastify-js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-    <!-- <script src="js/script.js"></script> -->
-    <script src="js/final.js"></script>
-    <script src="js/myfile.js"></script>
+    </div>
+    <div class="pop-up-counter">
+      <div class="flex-pop">
+        <h4>Pick assets from wallet</h4>
+        <div class="border-pick-assets"></div>
+        <i class="fa-solid fa-xmark close-two"></i>
+      </div>
+      <div class="article-transfer article-transfer-counter">
+      </div>
+    </div>
+    <div class="select-wallet">
+      <div class="flex-pop-select">
+        <i class="fa-solid fa-xmark close-three"></i>
+      </div>
+      <h5>Select Counterparty</h5>
+      <p>type the counterparty wallet</p>
+      <form class="input-wallet-container">
+        <label for="search">Search </label>
+        <input type="text" id="wallet-search" name="search" class="search">
+        <button class="selectbutton" id="selectWalletButt">SELECT</button>
+      </form>
+      <style>
+        .selectbutton {
+          border-top-right-radius: 17px;
+          border-bottom-right-radius: 17px;
+          padding: 17px;
+          background-image: linear-gradient(90deg,
+              rgba(113, 118, 198, 1) 20%,
+              rgba(200, 37, 157, 1) 75%);
+          color: #fff;
+          font-family: "Urbanist", sans-serif;
+          font-weight: bold;
+          border: none;
+          outline: none;
+          cursor: pointer;
+        }
+      </style>
+    </div>
+  </main>
+  <footer>
+    <small>®️2022 Bullet Swap .All Rights Reserved.</small>
+  </footer>
+  <!-- <script src="js/make.js"></script> -->
+  <script src="js/app.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/index.min.js"></script>
+  <script src="js/web3.min.js"></script>
+  <script type="text/javascript" src="toastify-js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <!-- <script src="js/script.js"></script> -->
+  <script src="js/final.js"></script>
+  <script src="js/myfile.js"></script>
 
 
 </body>
